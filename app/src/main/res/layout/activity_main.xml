@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="#2B2D42">
+
+
+    <TextView
+        android:gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="258dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="3dp"
+        android:text="@string/label_title"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"/>
+
+
+    <TextView
+        android:id="@+id/txtNumber"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="333dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/label_number"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="40sp" />
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_start"
+        android:textSize="30sp"
+        android:background="#EF233C"
+        android:layout_alignParentBottom="true"
+        android:padding="30dp"
+        />
+
+    <EditText
+        android:id="@+id/userNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btnStart"
+        android:layout_centerHorizontal="true"
+        android:background="#FFFFFF"
+        android:backgroundTint="#2B2D42"
+        android:ems="10"
+        android:hint="@string/hint_number"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="@android:color/holo_orange_light"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtScore"
+        android:layout_width="match_parent"
+        android:layout_height="111dp"
+        android:layout_alignBottom="@id/userNumber"
+        android:layout_marginEnd="0dp"
+        android:text="@string/label_score"
+        android:textAlignment="center"
+
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

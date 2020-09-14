@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">First Game</string>
+    <string name="btn_start">start!</string>
+    <string name="label_title">Memory</string>
+    <string name="label_number"></string>
+    <string name="hint_number">Insert the numbers here!</string>
+    <string name="label_score">score: 0</string>
+</resources>
