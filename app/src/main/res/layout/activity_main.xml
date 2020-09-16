@@ -1,82 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#03045e"
+    android:backgroundTint="#03045e"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:background="#2B2D42">
+    android:weightSum="3"
+    tools:context=".MainActivity">
 
-
-    <TextView
-        android:gravity="bottom"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="258dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="3dp"
-        android:text="@string/label_title"
-        android:textAlignment="center"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        android:textColor="@android:color/white"/>
+        android:layout_height="0dp"
+        android:layout_weight="1.4"
+        android:orientation="vertical"
+        android:weightSum="1.5">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="@string/label_memory"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="50sp"
+            android:textStyle="bold|italic"
+            tools:ignore="NestedWeights" />
 
-    <TextView
-        android:id="@+id/txtNumber"
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/react"
+            android:contentDescription="@string/desc_image" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="333dp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:text="@string/label_number"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="40sp" />
+        android:layout_height="0dp"
+        android:layout_weight="1.2"
+        android:orientation="vertical"
+        android:weightSum="3">
 
-    <Button
-        android:id="@+id/btnStart"
+        <TextView
+            android:id="@+id/txtScore"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:text="@string/label_score"
+            android:textColor="@android:color/white"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            tools:ignore="NestedWeights" />
+
+        <TextView
+            android:id="@+id/txtNumber"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:text="@string/label_number"
+            android:textColor="@android:color/white"
+            android:textSize="40sp"
+            android:textStyle="italic"
+            android:gravity="center"
+            tools:ignore="NestedWeights" />
+
+        <EditText
+            android:id="@+id/userNumber"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="@string/txt_hint"
+            android:textColorHint="#FAB6B6"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:autofillHints=""
+            android:textColor="@android:color/white"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_start"
-        android:textSize="30sp"
-        android:background="#EF233C"
-        android:layout_alignParentBottom="true"
-        android:padding="30dp"
-        />
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:orientation="vertical"
+        android:weightSum="1">
 
-    <EditText
-        android:id="@+id/userNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@id/btnStart"
-        android:layout_centerHorizontal="true"
-        android:background="#FFFFFF"
-        android:backgroundTint="#2B2D42"
-        android:ems="10"
-        android:hint="@string/hint_number"
-        android:inputType="number"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textColorHighlight="#FFFFFF"
-        android:textColorHint="@android:color/holo_orange_light"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#BDAF34"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="30sp"
+            android:textStyle="italic"
+            android:text="@string/btn_label"
+            tools:ignore="NestedWeights" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/txtScore"
-        android:layout_width="match_parent"
-        android:layout_height="111dp"
-        android:layout_alignBottom="@id/userNumber"
-        android:layout_marginEnd="0dp"
-        android:text="@string/label_score"
-        android:textAlignment="center"
-
-        android:textColor="@android:color/white"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
-</RelativeLayout>
+</LinearLayout>
