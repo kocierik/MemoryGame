@@ -107,6 +107,8 @@ class MainActivity : AppCompatActivity() {
                 userNumber.visibility = View.INVISIBLE
                 btnStart.visibility = View.VISIBLE
                 i=0
+                gameNumberList.clear()
+                userNumberList.clear()
             }
             bool = false
         }
