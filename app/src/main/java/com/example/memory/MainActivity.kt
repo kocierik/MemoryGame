@@ -174,7 +174,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun checkLose(){
         if(!game) {
-            txtNumber.text = "YOU LOSE"gi
+            txtNumber.text = "YOU LOSE"
             userNumber.visibility = View.INVISIBLE
             btnStart.visibility = View.VISIBLE
             gameReset()
