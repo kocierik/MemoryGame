@@ -13,21 +13,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.4"
+        android:layout_weight="0.7"
         android:orientation="vertical"
-        android:weightSum="1.5">
+        android:weightSum="1">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.5"
-            android:gravity="center"
-            android:text="@string/label_memory"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="50sp"
-            android:textStyle="bold|italic"
-            tools:ignore="NestedWeights" />
 
         <ImageView
             android:id="@+id/image"
@@ -42,18 +31,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.2"
+        android:layout_weight="0.9"
         android:orientation="vertical"
-        android:weightSum="3">
+        android:weightSum="1">
 
         <TextView
             android:id="@+id/txtScore"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.7"
+            android:layout_height="wrap_content"
             android:text="@string/label_score"
-            android:textColor="@android:color/white"
             android:textAlignment="center"
+            android:textColor="@android:color/white"
             android:textSize="30sp"
             tools:ignore="NestedWeights" />
 
@@ -61,10 +49,10 @@
             android:id="@+id/txtNumber"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1.3"
-            android:text="@string/label_number"
+            android:layout_weight="0.4"
+            android:text= "@string/label_number"
             android:textColor="@android:color/white"
-            android:textSize="40sp"
+            android:textSize="30sp"
             android:textStyle="italic"
             android:gravity="center"
             tools:ignore="NestedWeights" />
@@ -73,24 +61,169 @@
             android:id="@+id/userNumber"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="0.4"
             android:ems="10"
             android:inputType="number"
             android:hint="@string/txt_hint"
             android:textColorHint="#FAB6B6"
             android:textAlignment="center"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:autofillHints=""
             android:textColor="@android:color/white"/>
 
 
-
     </LinearLayout>
-
     <LinearLayout
+        android:id="@+id/firstNumber"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.4"
+        android:layout_weight="0.25"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="10sp"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10sp"
+            android:background="#141B41"
+            android:text="1"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:background="#141B41"
+            android:layout_marginEnd="10sp"
+            android:textColor="@android:color/white"
+            android:text="2"/>
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:layout_marginEnd="10sp"
+            android:background="#141B41"
+            android:textColor="@android:color/white"
+            android:text="3"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/secondNumber"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.25"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="10sp"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:layout_marginEnd="10sp"
+            android:background="#141B41"
+            android:textColor="@android:color/white"
+            android:text="4"/>
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:layout_marginEnd="10sp"
+            android:background="#141B41"
+            android:textColor="@android:color/white"
+            android:text="5"/>
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:layout_marginEnd="10sp"
+            android:background="#141B41"
+            android:textColor="@android:color/white"
+            android:text="6"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/thirdNumber"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.25"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="10sp"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:layout_marginEnd="10sp"
+            android:background="#141B41"
+            android:textColor="@android:color/white"
+            android:text="7"/>
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:layout_marginEnd="10sp"
+            android:background="#141B41"
+            android:textColor="@android:color/white"
+            android:text="8"/>
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:layout_marginEnd="10sp"
+            android:background="#141B41"
+            android:textColor="@android:color/white"
+            android:text="9"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/fourNumber"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.25"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="10sp"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/button0"
+            android:layout_width="185dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10sp"
+            android:background="#141B41"
+            android:text="0"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10sp"
+            android:background="#141B41"
+            android:text="del"
+
+            android:textColor="@android:color/white"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
         android:orientation="vertical"
         android:weightSum="1">
 
