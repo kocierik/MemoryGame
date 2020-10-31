@@ -125,7 +125,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun deleteNumber(){
         var number = userNumber.text.toString()
-        //number = number.dropLast()
         if(number.isNotEmpty()){
         number = number.substring(0, number.length - 1);
         userNumber.setText(number)
@@ -150,6 +149,7 @@ class MainActivity : AppCompatActivity() {
         }
         checkLose()
     }
+
     private fun getRandomNumber(){
         userNumber.visibility = View.INVISIBLE
         timer = object: CountDownTimer(totalTime, 1000) {
