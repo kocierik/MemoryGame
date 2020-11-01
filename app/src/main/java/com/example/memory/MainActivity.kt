@@ -12,6 +12,7 @@ import android.view.View
 import android.view.animation.AnimationUtils
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.example.memory.MainActivity.StaticFunctions.borderDrawable
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -82,17 +83,20 @@ class MainActivity : AppCompatActivity() {
         getRandomNumber()
     }
 
-    private fun borderDrawable(
-        width: Int = 10, // border width in pixels
-        color: Int = Color.BLACK, // border color
-        bgColor: Int = Color.TRANSPARENT // view background color
-    ): Drawable {
-        return GradientDrawable().apply {
-            shape = GradientDrawable.RECTANGLE
-            setStroke(width, color)
-            setColor(bgColor)
+    object StaticFunctions {
+        fun borderDrawable(
+            width: Int = 10, // border width in pixels
+            color: Int = Color.BLACK, // border color
+            bgColor: Int = Color.TRANSPARENT // view background color
+        ): Drawable {
+            return GradientDrawable().apply {
+                shape = GradientDrawable.RECTANGLE
+                setStroke(width, color)
+                setColor(bgColor)
+            }
         }
     }
+
 
     private fun keyboardInput(btnClicked: Button){
         var txt = "${userNumber.text}${btnClicked.text}"
@@ -152,6 +156,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun getRandomNumber(){
         userNumber.visibility = View.INVISIBLE
+        hideKeyboard()
         timer = object: CountDownTimer(totalTime, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 txtNumber.text = (10..100).random().toString()
@@ -187,6 +192,9 @@ class MainActivity : AppCompatActivity() {
         timer = null
         gameNumberList.clear()
         userNumber.text = null
+        hideKeyboard()
+    }
+    private fun hideKeyboard(){
         findViewById<LinearLayout>(R.id.firstNumber).visibility = View.INVISIBLE
         findViewById<LinearLayout>(R.id.secondNumber).visibility = View.INVISIBLE
         findViewById<LinearLayout>(R.id.thirdNumber).visibility = View.INVISIBLE

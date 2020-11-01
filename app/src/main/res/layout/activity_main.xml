@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#03045e"
-    android:backgroundTint="#03045e"
+    android:background="#000224"
     android:orientation="vertical"
     android:weightSum="3"
     tools:context=".MainActivity">
