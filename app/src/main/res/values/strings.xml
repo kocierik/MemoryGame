@@ -4,7 +4,7 @@
     <string name="label_memory">MEMORY</string>
     <string name="desc_image">Logo memory</string>
     <string name="label_number"></string>
-    <string name="btn_label">START!</string>
+    <string name="btn_label">RESTART!</string>
     <string name="txt_hint">Insert the number here!</string>
     <string name="label_score">Score\n0</string>
     <string name="setting">SETTING</string>

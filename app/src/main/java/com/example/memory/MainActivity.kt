@@ -1,6 +1,8 @@
 package com.example.memory
 
 import android.annotation.SuppressLint
+import android.content.Context
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.GradientDrawable
@@ -63,19 +65,28 @@ class MainActivity : AppCompatActivity() {
         val txtGame: TextView = findViewById(R.id.txtNumber)
         val TextNumber: EditText = findViewById(R.id.userNumber)
         val score: TextView = findViewById(R.id.txtScore)
+        val record: TextView = findViewById(R.id.record)
         txtScore.visibility = View.INVISIBLE
         val image: ImageView = findViewById(R.id.image)
         userNumber.visibility = View.INVISIBLE
         val clkRotate = AnimationUtils.loadAnimation(this, R.anim.rotate_clockwise)
         image.startAnimation(clkRotate)
+
+        val prefs: SharedPreferences = getSharedPreferences("myPrefsKey", MODE_PRIVATE)
+        var scores = prefs.getInt("key", 0) //0 is the default value
+        record.text = scores.toString()
+        startGame()
     }
     var timer: CountDownTimer? = null
     var score = 0
+    var highScore = 0
+
     var totalTime = 1000L
     var game = true
     var gameNumberList = mutableListOf<String>()
     @SuppressLint("SetTextI18n")
     private fun startGame(){
+
         score = 0
         txtScore.text = "score\n $score"
         btnStart.visibility = View.INVISIBLE
@@ -137,6 +148,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun checkNumber() {
         if (userNumber.text.length == gameNumberList.max()?.length && gameNumberList.isNotEmpty()) {
             for ((i, x) in gameNumberList.withIndex()) {
@@ -147,6 +159,11 @@ class MainActivity : AppCompatActivity() {
                     gameNumberList.removeAt(i)
                     checkEmptyList()
                     userNumber.text = null
+                    if(score > highScore){
+                        highScore = score
+                        record.text = "HIGH-SCORE: $highScore"
+                    }
+                    getRecord()
                     break
                 }
             }
@@ -199,6 +216,12 @@ class MainActivity : AppCompatActivity() {
         findViewById<LinearLayout>(R.id.secondNumber).visibility = View.INVISIBLE
         findViewById<LinearLayout>(R.id.thirdNumber).visibility = View.INVISIBLE
         findViewById<LinearLayout>(R.id.fourNumber).visibility = View.INVISIBLE
+    }
+    private fun getRecord(){
+        val prefs = getSharedPreferences("myPrefsKey", Context.MODE_PRIVATE)
+        val editor: SharedPreferences.Editor = prefs.edit()
+        editor.putInt("key", score)
+        editor.apply()
     }
 }
 
