@@ -14,11 +14,26 @@
         android:layout_weight="1"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:ems="10"
+            android:fontFamily="sans-serif-light"
+            android:gravity="bottom"
+            android:text="@string/memorygame"
+            android:textAlignment="center"
+            android:textColor="@color/colorTitle"
+            android:textSize="47sp"
+            android:textStyle="italic"
+            tools:ignore="RtlCompat" />
+
         <ImageView
             android:id="@+id/startImage"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/react"/>
+            android:layout_height="234dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/react" />
 
     </LinearLayout>
 
@@ -31,16 +46,17 @@
 
         <Button
             android:id="@+id/playButton"
-            android:layout_width="wrap_content"
+            android:layout_width="151dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
             android:background="@android:color/transparent"
             android:padding="20sp"
             android:text="@string/play"
             android:textColor="@color/colorAccent"
             android:textSize="40sp"
-            android:layout_marginBottom="10dp"
             android:textStyle="italic" />
+
         <Button
             android:id="@+id/settingButton"
             android:layout_width="wrap_content"
