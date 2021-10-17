@@ -2,8 +2,6 @@
 
 # MemoryGame
 
-### Use android Studio to launch the game :monocle_face:
-
 #### requirement:
 + minSdkVersion: 26
 
